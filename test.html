@@ -8,12 +8,38 @@
     <style>
         html,body{
             height: 100%;
+            color: #000;
+        }
+        .close{
+            position:relative;
+            width:15px;
+            height:15px;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+            display: inline-block;
+        }
+        .close:after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width:15px;
+            height:15px;
+            -webkit-transform: rotate(270deg);
+            -moz-transform: rotate(270deg);
+            -o-transform: rotate(270deg);
+            -ms-transform: rotate(270deg);
+            transform: rotate(270deg);
         }
     </style>
 </head>
 <body>
+
 <div style="width:100%;height: 100%;">
-    <div style="width: 100%;height: 50px;background:pink"></div>
+    <div style="width: 100%;height: 50px;background:deepskyblue"></div>
     <div style="width:100%;height:100%;position: fixed;top: 0;    -webkit-overflow-scrolling: touch;">
         <div style="height: 100%;overflow: auto;">
             <iframe id="rightIFrame"
@@ -21,6 +47,7 @@
                     frameborder="0" width="100%"  name="rightIFrame" height="63383px;"></iframe>
         </div>
     </div>
+    <div style="position: fixed;right:18px;top:18px;">&times;</div>
 </div>
 </body>
 </html>
